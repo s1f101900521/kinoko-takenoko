@@ -31,6 +31,7 @@ def answer():
         message = re.sub(r'&', r'&amp;', message)
         message = re.sub(r'<', r'&lt;', message)
         message = re.sub(r'<', r'&gt;', message)
+        message = re.sub(r'\*(.+)\*', r'<strong>\1</strong>', message)
         message_html += '<div class="alert {1}" role="alert">{0}</div>\n'.format(
             message, 'alert-warning ms-5' if i % 2 == 0 else 'alert-success me-5')
 
