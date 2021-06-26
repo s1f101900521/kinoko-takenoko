@@ -12,9 +12,9 @@ def top():
 @app.route('/vote', methods=['POST'])
 def answer():
     global kinoko_count, takenoko_count
-    if request.form["item"] == 'kinoko':
+    if request.form.get("item") == 'kinoko':
         kinoko_count += 1
-    elif request.form["item"] == 'takenoko':
+    elif request.form.get("item") == 'takenoko':
         takenoko_count += 1
     
     kinoko_percent = kinoko_count / (kinoko_count + takenoko_count) * 100
