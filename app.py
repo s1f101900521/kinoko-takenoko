@@ -30,7 +30,7 @@ def answer():
         message = messages[i]
         message = re.sub(r'&', r'&amp;', message)
         message = re.sub(r'<', r'&lt;', message)
-        message = re.sub(r'<', r'&gt;', message)
+        message = re.sub(r'>', r'&gt;', message)
         message = re.sub(r'\*(.+)\*', r'<strong>\1</strong>', message)
         message = re.sub(r'(\d{2,3})-\d+-\d+', r'\1-****-****', message)
         message_html += '<div class="alert {1}" role="alert">{0}</div>\n'.format(
