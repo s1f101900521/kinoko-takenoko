@@ -1,5 +1,5 @@
 import re
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 kinoko_count = 3
@@ -9,6 +9,10 @@ messages = ['Kinoko is wonrderful!', 'Takenoko is awesome!']
 @app.route('/')
 def top():
     return render_template('index.html', **vars())
+
+@app.route('/api/v1/votes')
+def vote_api():
+    return jsonify({'kinoko': kinoko_count, 'takenoko': takenoko_count})
 
 @app.route('/vote', methods=['POST'])
 def answer():
