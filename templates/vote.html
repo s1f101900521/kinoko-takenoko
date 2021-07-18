@@ -20,7 +20,7 @@
       </div>
       <div class="col-12 col-md-10">
         <div class="progress">
-          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="{{kinoko_percent|safe}}" aria-valuemin="0" aria-valuemax="100" style="width: {{kinoko_percent|safe}}%"></div>
+          <div id="kinoko" class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-valuenow="{{kinoko_percent|safe}}" aria-valuemin="0" aria-valuemax="100" style="width: {{kinoko_percent|safe}}%"></div>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
       </div>
       <div class="col-12 col-md-10">
         <div class="progress">
-          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="{{takenoko_percent|safe}}" aria-valuemin="0" aria-valuemax="100" style="width: {{takenoko_percent|safe}}%"></div>
+          <div id="takenoko" class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="{{takenoko_percent|safe}}" aria-valuemin="0" aria-valuemax="100" style="width: {{takenoko_percent|safe}}%"></div>
         </div>
       </div>
     </div>
@@ -47,6 +47,6 @@
     </div>
   </div>
 </main>
-    
+<script type="text/javascript" src="/static/js/app.js"></script>
   </body>
 </html>
